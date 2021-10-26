@@ -1,6 +1,6 @@
 {
   "name": "@xcor/sample4",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "sample package",
   "homepage": "https://example.com/",
   "main": "lib/index.js",
