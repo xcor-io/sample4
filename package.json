@@ -1,0 +1,63 @@
+{
+  "name": "@xcor/sample4",
+  "version": "1.0.0",
+  "description": "sample package",
+  "homepage": "https://example.com/",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint lib test",
+    "test": "mocha test/spec",
+    "coverage": "nyc mocha test/spec",
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "check": "xrun --serial coverage coveralls"
+  },
+  "keywords": [
+    "sample",
+    "package"
+  ],
+  "author": "Example",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@xarc/run": "^1.0.5",
+    "chai": "^4.3.4",
+    "coveralls": "^3.1.1",
+    "eslint": "^8.1.0",
+    "mocha": "^9.1.3",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {},
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xcor-io/sample4"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "nyc": {
+    "extends": [],
+    "all": true,
+    "reporter": [
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "exclude": [
+      "coverage",
+      "test",
+      ".eslintrc.js"
+    ],
+    "check-coverage": true,
+    "statements": 100,
+    "branches": 100,
+    "functions": 100,
+    "lines": 100,
+    "cache": false
+  }
+}
